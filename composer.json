@@ -1,0 +1,14 @@
+{
+    "name": "leo-galleguillos/ip-address",
+    "license": "MIT",
+    "require": {
+        "leo-galleguillos/test": "dev-master",
+        "zendframework/zend-test": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeoGalleguillos\\IpAddress\\": "src/",
+            "LeoGalleguillos\\IpAddressTest\\": "test/"
+        }
+    }
+}
