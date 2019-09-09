@@ -21,6 +21,11 @@ class Module
     {
         return [
             'factories' => [
+                IpAddressService\Banned::class => function ($sm) {
+                    return new IpAddressService\Banned(
+                        $sm->get(IpAddressTable\Banned::class)
+                    );
+                },
                 IpAddressTable\Banned::class => function ($sm) {
                     return new IpAddressTable\Banned(
                         $sm->get('ip-address')
