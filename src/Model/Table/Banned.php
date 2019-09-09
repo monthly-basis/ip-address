@@ -36,8 +36,8 @@ class Banned
         $sql = '
             INSERT
               INTO `banned`
-                   (`ip_address`, `user_id`, `reason`)
-            VALUES (?, ?, ?);
+                   (`ip_address`, `user_id`, `reason`, `created`)
+            VALUES (?, ?, ?, UTC_TIMESTAMP());
         ';
         $parameters = [
             $ipAddress,
