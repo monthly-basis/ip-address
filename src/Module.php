@@ -30,6 +30,11 @@ class Module
                     return new IpAddressTable\Banned(
                         $sm->get('ip-address')
                     );
+                },
+                IpAddressTable\BannedFirstThreeQuadrants::class => function ($sm) {
+                    return new IpAddressTable\BannedFirstThreeQuadrants(
+                        $sm->get('ip-address')
+                    );
                 }
             ],
         ];
