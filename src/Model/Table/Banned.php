@@ -70,6 +70,25 @@ class Banned
         }
     }
 
+    public function selectCountWhereIpAddressLikeAndCreatedGreaterThan(
+        string $ipAddress,
+        string $created
+    ): int {
+        $sql = '
+            SELECT COUNT(*) AS `count`
+              FROM `banned`
+             WHERE `ip_address` LIKE ?
+               AND `created` > ?
+                 ;
+        ';
+        $parameters = [
+            $ipAddress,
+            $created,
+        ];
+        $array = $this->adapter->query($sql)->execute($parameters)->current();
+        return (int) $array['count'];
+    }
+
     public function selectWhereIpAddress(string $ipAddress): array
     {
         $sql    = '
