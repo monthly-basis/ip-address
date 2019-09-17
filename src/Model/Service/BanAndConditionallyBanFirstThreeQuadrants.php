@@ -9,10 +9,12 @@ class BanAndConditionallyBanFirstThreeQuadrants
     public function __construct(
         IpAddressService\Ban $banService,
         IpAddressService\BanFirstThreeQuadrants $banFirstThreeQuadrantsService,
+        IpAddressService\FirstThreeQuadrants $firstThreeQuadrantsService,
         IpAddressTable\Banned $bannedTable
     ) {
         $this->banService                    = $banService;
         $this->banFirstThreeQuadrantsService = $banFirstThreeQuadrantsService;
+        $this->firstThreeQuadrantsService    = $firstThreeQuadrantsService;
         $this->bannedTable                   = $bannedTable;
     }
 

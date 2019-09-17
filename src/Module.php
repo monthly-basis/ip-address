@@ -30,6 +30,7 @@ class Module
                     return new IpAddressService\BanAndConditionallyBanFirstThreeQuadrants(
                         $sm->get(IpAddressService\Ban::class),
                         $sm->get(IpAddressService\BanFirstThreeQuadrants::class),
+                        $sm->get(IpAddressService\FirstThreeQuadrants::class),
                         $sm->get(IpAddressTable\Banned::class)
                     );
                 },
