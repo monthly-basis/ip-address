@@ -26,6 +26,11 @@ class Module
                         $sm->get(IpAddressTable\Banned::class)
                     );
                 },
+                IpAddressService\BanFirstThreeQuadrants::class => function ($sm) {
+                    return new IpAddressService\BanFirstThreeQuadrants(
+                        $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
+                    );
+                },
                 IpAddressService\Banned::class => function ($sm) {
                     return new IpAddressService\Banned(
                         $sm->get(IpAddressTable\Banned::class)
