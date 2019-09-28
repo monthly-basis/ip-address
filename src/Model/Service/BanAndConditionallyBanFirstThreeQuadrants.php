@@ -22,7 +22,7 @@ class BanAndConditionallyBanFirstThreeQuadrants
         string $ipAddress,
         int $userId,
         string $reason
-    ): bool {
+    ) {
         $this->banService->ban(
             $ipAddress,
             $userId,
