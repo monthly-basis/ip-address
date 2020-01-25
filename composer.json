@@ -2,8 +2,8 @@
     "name": "leo-galleguillos/ip-address",
     "license": "MIT",
     "require": {
-        "leo-galleguillos/test": "dev-master",
-        "zendframework/zend-test": "^3.1"
+        "laminas/laminas-test": "^3.1",
+        "leo-galleguillos/test": "dev-master"
     },
     "autoload": {
         "psr-4": {
