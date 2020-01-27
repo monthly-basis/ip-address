@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "812164b29a3ad384806c5002a04d80f9",
+    "content-hash": "1da5aeccf4736fce48fe8dad06f53872",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1266,16 +1266,16 @@
         },
         {
             "name": "leo-galleguillos/test",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Test.git",
-                "reference": "4bc9e130a1c03b72f93329e75ff4bf519f03a4c4"
+                "reference": "34e71d6fd5e13c7bfae0632a9599ae0534ce0b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/4bc9e130a1c03b72f93329e75ff4bf519f03a4c4",
-                "reference": "4bc9e130a1c03b72f93329e75ff4bf519f03a4c4",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/34e71d6fd5e13c7bfae0632a9599ae0534ce0b94",
+                "reference": "34e71d6fd5e13c7bfae0632a9599ae0534ce0b94",
                 "shasum": ""
             },
             "require": {
@@ -1293,7 +1293,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2020-01-13T07:41:45+00:00"
+            "time": "2020-01-26T07:24:54+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2807,9 +2807,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "leo-galleguillos/test": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
