@@ -35,7 +35,7 @@ class BanAndConditionallyBanFirstThreeQuadrants
 
         $count = $this->bannedTable->selectCountWhereIpAddressLikeAndCreatedGreaterThan(
             $firstThreeQuadrants . '.%',
-            date('Y-m-d H:i:s', strtotime('-3 days'))
+            date('Y-m-d H:i:s', strtotime('-32 days'))
         );
 
         if ($count >= 3) {
