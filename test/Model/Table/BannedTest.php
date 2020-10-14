@@ -6,7 +6,7 @@ use LeoGalleguillos\Test\TableTestCase;
 
 class BannedTest extends TableTestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->bannedTable = new IpAddressTable\Banned($this->getAdapter());
 

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class BannedTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->bannedTableMock = $this->createMock(
             IpAddressTable\Banned::class

@@ -6,7 +6,7 @@ use LeoGalleguillos\Test\TableTestCase;
 
 class BannedFirstThreeQuadrantsTest extends TableTestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->bannedFirstThreeQuadrantsTable = new IpAddressTable\BannedFirstThreeQuadrants($this->getAdapter());
 

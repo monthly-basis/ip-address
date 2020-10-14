@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class BanFirstThreeQuadrantsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->bannedFirstThreeQuadrantsTableMock = $this->createMock(
             IpAddressTable\BannedFirstThreeQuadrants::class

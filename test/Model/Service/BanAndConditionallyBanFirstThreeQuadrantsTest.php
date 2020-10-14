@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class BanAndConditionallyBanFirstThreeQuadrantsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->banServiceMock = $this->createMock(
             IpAddressService\Ban::class
