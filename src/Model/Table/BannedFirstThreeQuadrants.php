@@ -3,7 +3,7 @@ namespace LeoGalleguillos\IpAddress\Model\Table;
 
 use Generator;
 use TypeError;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class BannedFirstThreeQuadrants
 {

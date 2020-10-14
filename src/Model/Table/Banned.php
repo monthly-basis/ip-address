@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\IpAddress\Model\Table;
 
 use Generator;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class Banned
 {
