@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\IpAddressTest\Model\Table;
 
 use LeoGalleguillos\IpAddress\Model\Table as IpAddressTable;
-use LeoGalleguillos\Test\TableTestCase;
+use MonthlyBasis\LaminasTest\TableTestCase;
 
 class BannedFirstThreeQuadrantsTest extends TableTestCase
 {
