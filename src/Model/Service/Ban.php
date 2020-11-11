@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\IpAddress\Model\Service;
+namespace MonthlyBasis\IpAddress\Model\Service;
 
-use LeoGalleguillos\IpAddress\Model\Table as IpAddressTable;
+use MonthlyBasis\IpAddress\Model\Table as IpAddressTable;
 
 class Ban
 {

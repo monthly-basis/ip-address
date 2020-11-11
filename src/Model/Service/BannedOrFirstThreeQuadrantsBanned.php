@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\IpAddress\Model\Service;
+namespace MonthlyBasis\IpAddress\Model\Service;
 
-use LeoGalleguillos\IpAddress\Model\Service as IpAddressService;
+use MonthlyBasis\IpAddress\Model\Service as IpAddressService;
 
 class BannedOrFirstThreeQuadrantsBanned
 {

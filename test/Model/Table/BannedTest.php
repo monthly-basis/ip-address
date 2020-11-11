@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\IpAddressTest\Model\Table;
+namespace MonthlyBasis\IpAddressTest\Model\Table;
 
-use LeoGalleguillos\IpAddress\Model\Table as IpAddressTable;
+use MonthlyBasis\IpAddress\Model\Table as IpAddressTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
 
 class BannedTest extends TableTestCase

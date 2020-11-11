@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\IpAddress\Model\Table;
+namespace MonthlyBasis\IpAddress\Model\Table;
 
 use Generator;
 use Laminas\Db\Adapter\Adapter;

@@ -2,7 +2,7 @@
 
 return [
     'modules' => [
-        'LeoGalleguillos\IpAddress',
+        'MonthlyBasis\IpAddress',
         'Zend\Db',
         'Zend\Router',
     ],

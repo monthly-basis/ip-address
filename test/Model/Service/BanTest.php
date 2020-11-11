@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\IpAddressTest\Model\Service;
+namespace MonthlyBasis\IpAddressTest\Model\Service;
 
-use LeoGalleguillos\IpAddress\Model\Service as IpAddressService;
-use LeoGalleguillos\IpAddress\Model\Table as IpAddressTable;
+use MonthlyBasis\IpAddress\Model\Service as IpAddressService;
+use MonthlyBasis\IpAddress\Model\Table as IpAddressTable;
 use PHPUnit\Framework\TestCase;
 
 class BanTest extends TestCase

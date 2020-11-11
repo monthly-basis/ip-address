@@ -1,9 +1,9 @@
 <?php
-namespace LeoGalleguillos\IpAddress;
+namespace MonthlyBasis\IpAddress;
 
-use LeoGalleguillos\IpAddress\Model\Factory as IpAddressFactory;
-use LeoGalleguillos\IpAddress\Model\Service as IpAddressService;
-use LeoGalleguillos\IpAddress\Model\Table as IpAddressTable;
+use MonthlyBasis\IpAddress\Model\Factory as IpAddressFactory;
+use MonthlyBasis\IpAddress\Model\Service as IpAddressService;
+use MonthlyBasis\IpAddress\Model\Table as IpAddressTable;
 
 class Module
 {

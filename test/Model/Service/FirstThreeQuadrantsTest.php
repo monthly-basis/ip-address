@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\IpAddressTest\Model\Service;
+namespace MonthlyBasis\IpAddressTest\Model\Service;
 
-use LeoGalleguillos\IpAddress\Model\Service as IpAddressService;
+use MonthlyBasis\IpAddress\Model\Service as IpAddressService;
 use PHPUnit\Framework\TestCase;
 
 class FirstThreeQuadrantsTest extends TestCase

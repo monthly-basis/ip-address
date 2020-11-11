@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\IpAddress\Model\Service;
+namespace MonthlyBasis\IpAddress\Model\Service;
 
 class FirstThreeQuadrants
 {
