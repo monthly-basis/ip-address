@@ -14,11 +14,16 @@ class BannedFirstThreeQuadrantsTest extends TableTestCase
         $this->createTable('banned_first_three_quadrants');
     }
 
-    public function testInsert()
+    public function test_insertIgnore()
     {
         $this->assertSame(
             1,
-            $this->bannedFirstThreeQuadrantsTable->insert('1.2.3')
+            $this->bannedFirstThreeQuadrantsTable->insertIgnore('1.2.3')
+        );
+
+        $this->assertSame(
+            0,
+            $this->bannedFirstThreeQuadrantsTable->insertIgnore('1.2.3')
         );
     }
 
@@ -29,9 +34,9 @@ class BannedFirstThreeQuadrantsTest extends TableTestCase
             iterator_to_array($generator)
         );
 
-        $this->bannedFirstThreeQuadrantsTable->insert('1.2.3');
-        $this->bannedFirstThreeQuadrantsTable->insert('7.8.9');
-        $this->bannedFirstThreeQuadrantsTable->insert('123.456.789');
+        $this->bannedFirstThreeQuadrantsTable->insertIgnore('1.2.3');
+        $this->bannedFirstThreeQuadrantsTable->insertIgnore('7.8.9');
+        $this->bannedFirstThreeQuadrantsTable->insertIgnore('123.456.789');
 
         $generator = $this->bannedFirstThreeQuadrantsTable->select();
         $array = iterator_to_array($generator);

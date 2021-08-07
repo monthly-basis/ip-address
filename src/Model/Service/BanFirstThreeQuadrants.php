@@ -14,7 +14,7 @@ class BanFirstThreeQuadrants
     public function banFirstThreeQuadrants(
         string $firstThreeQuadrants
     ): bool {
-        return (bool) $this->bannedFirstThreeQuadrantsTable->insert(
+        return (bool) $this->bannedFirstThreeQuadrantsTable->insertIgnore(
             $firstThreeQuadrants
         );
     }

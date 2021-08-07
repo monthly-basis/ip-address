@@ -17,11 +17,11 @@ class BannedFirstThreeQuadrants
         $this->adapter = $adapter;
     }
 
-    public function insert(
+    public function insertIgnore(
         string $firstThreeQuadrants
     ): int {
         $sql = '
-            INSERT
+            INSERT IGNORE
               INTO `banned_first_three_quadrants`
                    (`first_three_quadrants`, `created`)
             VALUES (?, UTC_TIMESTAMP());

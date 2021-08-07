@@ -19,10 +19,12 @@ class BanFirstThreeQuadrantsTest extends TestCase
 
     public function testBan()
     {
-        $this->bannedFirstThreeQuadrantsTableMock->method('insert')->will(
-            $this->onConsecutiveCalls(
-                1, 2, 0
-            )
+        $this->bannedFirstThreeQuadrantsTableMock
+             ->method('insertIgnore')
+             ->will(
+                 $this->onConsecutiveCalls(
+                     1, 2, 0
+                 )
         );
         $this->assertTrue(
             $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('1.2.3.4')
