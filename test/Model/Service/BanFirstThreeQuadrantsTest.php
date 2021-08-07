@@ -17,23 +17,29 @@ class BanFirstThreeQuadrantsTest extends TestCase
         );
     }
 
-    public function testBan()
+    public function test_banFirstThreeQuadrants()
     {
         $this->bannedFirstThreeQuadrantsTableMock
+             ->expects($this->exactly(3))
              ->method('insertIgnore')
+             ->withConsecutive(
+                 ['1.2.3'],
+                 ['4.5.6'],
+                 ['7.8.9'],
+             )
              ->will(
                  $this->onConsecutiveCalls(
                      1, 2, 0
                  )
         );
         $this->assertTrue(
-            $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('1.2.3.4')
+            $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('1.2.3')
         );
         $this->assertTrue(
-            $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('1.2.3.4')
+            $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('4.5.6')
         );
         $this->assertFalse(
-            $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('1.2.3.4')
+            $this->banFirstThreeQuadrantsService->banFirstThreeQuadrants('7.8.9')
         );
     }
 }
