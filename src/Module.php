@@ -59,6 +59,9 @@ class Module
                         $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
                     );
                 },
+                IpAddressService\Version::class => function ($sm) {
+                    return new IpAddressService\Version();
+                },
                 IpAddressTable\Banned::class => function ($sm) {
                     return new IpAddressTable\Banned(
                         $sm->get('ip-address')
