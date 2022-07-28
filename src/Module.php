@@ -62,6 +62,12 @@ class Module
                 IpAddressService\V6\FirstFourSegments::class => function ($sm) {
                     return new IpAddressService\V6\FirstFourSegments();
                 },
+                IpAddressService\V6\FirstFourSegmentsBanned::class => function ($sm) {
+                    return new IpAddressService\V6\FirstFourSegmentsBanned(
+                        $sm->get(IpAddressService\V6\FirstFourSegments::class),
+                        $sm->get(IpAddressTable\BannedFirstFourSegments::class)
+                    );
+                },
                 IpAddressService\Version::class => function ($sm) {
                     return new IpAddressService\Version();
                 },
@@ -70,11 +76,16 @@ class Module
                         $sm->get('ip-address')
                     );
                 },
+                IpAddressTable\BannedFirstFourSegments::class => function ($sm) {
+                    return new IpAddressTable\BannedFirstFourSegments(
+                        $sm->get('ip-address')
+                    );
+                },
                 IpAddressTable\BannedFirstThreeQuadrants::class => function ($sm) {
                     return new IpAddressTable\BannedFirstThreeQuadrants(
                         $sm->get('ip-address')
                     );
-                }
+                },
             ],
         ];
     }
