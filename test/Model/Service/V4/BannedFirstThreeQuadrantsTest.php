@@ -48,8 +48,14 @@ class BannedFirstThreeQuadrantsTest extends TestCase
         $generator = $this->bannedFirstThreeQuadrantsService->getBannedFirstThreeQuadrants();
         $this->assertSame(
             [
-                '1.2.3',
-                '4.5.6',
+                [
+                    'first_three_quadrants' => '1.2.3',
+                    'created' => '2022-07-27 22:52:04',
+                ],
+                [
+                    'first_three_quadrants' => '4.5.6',
+                    'created' => '2022-07-28 22:52:04',
+                ],
             ],
             iterator_to_array($generator)
         );

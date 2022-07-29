@@ -17,7 +17,7 @@ class BannedFirstThreeQuadrants
         $result = $this->bannedFirstThreeQuadrantsTable->select();
 
         foreach ($result as $array) {
-            yield $array['first_three_quadrants'];
+            yield $array;
         }
     }
 }
