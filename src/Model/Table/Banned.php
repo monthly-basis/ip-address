@@ -3,6 +3,7 @@ namespace MonthlyBasis\IpAddress\Model\Table;
 
 use Generator;
 use Laminas\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Driver\Pdo\Result;
 
 class Banned
 {
@@ -89,7 +90,7 @@ class Banned
         return (int) $array['count'];
     }
 
-    public function selectWhereIpAddress(string $ipAddress): array
+    public function selectWhereIpAddress(string $ipAddress): Result
     {
         $sql    = '
             SELECT `ip_address`
@@ -103,6 +104,6 @@ class Banned
         $parameters = [
             $ipAddress,
         ];
-        return $this->adapter->query($sql)->execute($parameters)->current();
+        return $this->adapter->query($sql)->execute($parameters);
     }
 }
