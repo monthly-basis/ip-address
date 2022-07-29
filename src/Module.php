@@ -61,6 +61,11 @@ class Module
                         $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
                     );
                 },
+                IpAddressService\V6\BannedFirstFourSegments::class => function ($sm) {
+                    return new IpAddressService\V6\BannedFirstFourSegments(
+                        $sm->get(IpAddressTable\BannedFirstFourSegments::class)
+                    );
+                },
                 IpAddressService\V6\FirstFourSegments::class => function ($sm) {
                     return new IpAddressService\V6\FirstFourSegments();
                 },
