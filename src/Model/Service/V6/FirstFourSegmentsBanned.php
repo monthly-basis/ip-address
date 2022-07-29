@@ -25,6 +25,6 @@ class FirstFourSegmentsBanned
             $firstFourSegments
         );
 
-        return ($result->current() === false);
+        return ($result->current() !== false);
     }
 }
