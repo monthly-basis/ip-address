@@ -41,8 +41,10 @@ class BannedTest extends TestCase
         $hydrator->hydrate(
             $resultMock,
             [
-                'ip_address' => '1.2.3.4',
-                'created' => '2022-07-28 22:52:04',
+                [
+                    'ip_address' => '1.2.3.4',
+                    'created'    => '2022-07-28 22:52:04',
+                ],
             ]
         );
         $this->bannedTableMock
