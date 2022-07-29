@@ -4,6 +4,7 @@ namespace MonthlyBasis\IpAddress\Model\Table;
 use Generator;
 use TypeError;
 use Laminas\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Driver\Pdo\Result;
 
 class BannedFirstThreeQuadrants
 {
@@ -35,10 +36,7 @@ class BannedFirstThreeQuadrants
             ->getAffectedRows();
     }
 
-    /**
-     * @yield array
-     */
-    public function select(): Generator
+    public function select(): Result
     {
         $sql = '
             SELECT `first_three_quadrants`
@@ -48,9 +46,7 @@ class BannedFirstThreeQuadrants
                 BY `first_three_quadrants` ASC
                  ;
         ';
-        foreach ($this->adapter->query($sql)->execute() as $array) {
-            yield $array;
-        }
+        return $this->adapter->query($sql)->execute();
     }
 
     /**

@@ -27,19 +27,19 @@ class BannedFirstThreeQuadrantsTest extends TableTestCase
         );
     }
 
-    public function testSelect()
+    public function test_select()
     {
-        $generator = $this->bannedFirstThreeQuadrantsTable->select();
+        $result = $this->bannedFirstThreeQuadrantsTable->select();
         $this->assertEmpty(
-            iterator_to_array($generator)
+            iterator_to_array($result)
         );
 
         $this->bannedFirstThreeQuadrantsTable->insertIgnore('1.2.3');
         $this->bannedFirstThreeQuadrantsTable->insertIgnore('7.8.9');
         $this->bannedFirstThreeQuadrantsTable->insertIgnore('123.456.789');
 
-        $generator = $this->bannedFirstThreeQuadrantsTable->select();
-        $array = iterator_to_array($generator);
+        $result = $this->bannedFirstThreeQuadrantsTable->select();
+        $array = iterator_to_array($result);
 
         $this->assertSame(
             '1.2.3',
