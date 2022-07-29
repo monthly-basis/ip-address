@@ -41,7 +41,10 @@ class Module
                 },
                 IpAddressService\Banned::class => function ($sm) {
                     return new IpAddressService\Banned(
-                        $sm->get(IpAddressTable\Banned::class)
+                        $sm->get(IpAddressService\FirstThreeQuadrantsBanned::class),
+                        $sm->get(IpAddressService\V6\FirstFourSegmentsBanned::class),
+                        $sm->get(IpAddressService\Version::class),
+                        $sm->get(IpAddressTable\Banned::class),
                     );
                 },
                 IpAddressService\BannedOrFirstThreeQuadrantsBanned::class => function ($sm) {
