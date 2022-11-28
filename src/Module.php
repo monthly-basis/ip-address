@@ -56,6 +56,9 @@ class Module
                         $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
                     );
                 },
+                IpAddressService\Googlebot::class => function ($sm) {
+                    return new IpAddressService\Googlebot();
+                },
                 IpAddressService\V4\BannedFirstThreeQuadrants::class => function ($sm) {
                     return new IpAddressService\V4\BannedFirstThreeQuadrants(
                         $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
