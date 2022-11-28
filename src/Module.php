@@ -59,6 +59,13 @@ class Module
                         $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
                     );
                 },
+                IpAddressService\FirstThreeQuadrantsOrFirstFourSegments::class => function ($sm) {
+                    return new IpAddressService\FirstThreeQuadrantsOrFirstFourSegments(
+                        $sm->get(IpAddressService\V4\FirstThreeQuadrants::class),
+                        $sm->get(IpAddressService\V6\FirstFourSegments::class),
+                        $sm->get(IpAddressService\Version::class),
+                    );
+                },
                 IpAddressService\Googlebot::class => function ($sm) {
                     return new IpAddressService\Googlebot();
                 },
