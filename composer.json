@@ -3,7 +3,8 @@
     "license": "MIT",
     "require": {
         "laminas/laminas-test": "^4.0",
-        "monthly-basis/laminas-test": "^2.0"
+        "monthly-basis/laminas-test": "^2.0",
+        "symfony/http-foundation": "^6.1"
     },
     "autoload": {
         "psr-4": {
