@@ -47,6 +47,9 @@ class Module
                         $sm->get(IpAddressTable\Banned::class),
                     );
                 },
+                /**
+                 * @deprecated Use IpAddressService\V4\FirstThreeQuadrants() instead.
+                 */
                 IpAddressService\FirstThreeQuadrants::class => function ($sm) {
                     return new IpAddressService\FirstThreeQuadrants();
                 },
@@ -63,6 +66,9 @@ class Module
                     return new IpAddressService\V4\BannedFirstThreeQuadrants(
                         $sm->get(IpAddressTable\BannedFirstThreeQuadrants::class)
                     );
+                },
+                IpAddressService\V4\FirstThreeQuadrants::class => function ($sm) {
+                    return new IpAddressService\V4\FirstThreeQuadrants();
                 },
                 IpAddressService\V6\BannedFirstFourSegments::class => function ($sm) {
                     return new IpAddressService\V6\BannedFirstFourSegments(

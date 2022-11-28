@@ -1,9 +1,6 @@
 <?php
-namespace MonthlyBasis\IpAddress\Model\Service;
+namespace MonthlyBasis\IpAddress\Model\Service\V4;
 
-/**
- * @deprecated Use IpAddressService\V4\FirstThreeQuadrants() instead.
- */
 class FirstThreeQuadrants
 {
     public function getFirstThreeQuadrants(string $ipAddress)
