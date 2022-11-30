@@ -47,6 +47,9 @@ class Module
                         $sm->get(IpAddressTable\Banned::class),
                     );
                 },
+                IpAddressService\Bingbot::class => function ($sm) {
+                    return new IpAddressService\Bingbot();
+                },
                 /**
                  * @deprecated Use IpAddressService\V4\FirstThreeQuadrants() instead.
                  */
