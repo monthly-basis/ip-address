@@ -69,6 +69,9 @@ class Module
                         $sm->get(IpAddressService\Version::class),
                     );
                 },
+                IpAddressService\Google::class => function ($sm) {
+                    return new IpAddressService\Google();
+                },
                 IpAddressService\Googlebot::class => function ($sm) {
                     return new IpAddressService\Googlebot();
                 },
